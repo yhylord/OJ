@@ -1,4 +1,4 @@
 OJ
 ==
 
-Online judge
+Online Judge
