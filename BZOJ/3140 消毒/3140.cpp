@@ -69,16 +69,18 @@ int main() {
                     int x;
                     scanf("%d", &x);
                     if (x)
-                        if (a < b && a < c)
+                        if (a <= b && a <= c)
                             d[++cnt] = pos(i, j, k);
-                        else if (b < a && b < c)
+                        else if (b <= a && b <= c)
                             d[++cnt] = pos(j, i, k);
                         else
                             d[++cnt] = pos(k, j, i);
                 }
-        if (b < a && b < c)
+        if (a <= b && a <= c)
+            swap(a, a);
+        else if (b <= a && b <= c)
             swap(a, b);
-        if (c < a && c < b)
+        else
             swap(a, c);
         ans = a;
         dfs(1, 0);
